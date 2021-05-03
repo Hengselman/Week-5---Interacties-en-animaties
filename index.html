@@ -1,12 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
+<html lang="en" dir="ltr">
 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="main.css" />
+  <title>Week 4 - JavaScript en het DOM</title>
+</head>
+
+<body>
+  <header>
+    <div class="overlay"></div>
+    <figure><img class="logo" src="img/kebabkabouter_logo.png" alt="Logo van het restaurant: Kebab-Kabouter."></figure>
+    <h1> Welkom op de website van Kebab-Kabouter! </h1>
+    <h3> *De lekkerste kebab, door de kleinste mensen* </h3>
+  </header>
+  <main class="gerechtenlijst">
+    <section class="filter_buttons">
+      <label class="buttonContainer">Populair<input class="buttonFilter" id="buttonPopulair" type="checkbox" name="populair" checked><span class="checkboxCustom"></span></label>
+      <label class="buttonContainer">Kleine hap<input class="buttonFilter" id="buttonKleineHap" type="checkbox" name="kleineHap" checked><span class="checkboxCustom"></span></label>
+      <label class="buttonContainer">Grote hap<input class="buttonFilter" id="buttonGroteHap" type="checkbox" name="groteHap" checked><span class="checkboxCustom"></span></label>
+      <label class="buttonContainer">Snack<input class="buttonFilter" id="buttonSnack" type="checkbox" name="snack" checked><span class="checkboxCustom"></span></label>
+      <label class="buttonContainer">Vegetarisch<input class="buttonFilter" id="buttonVegetarisch" type="checkbox" name="vegetarisch"><span class="checkboxCustom"></span></label>
+    </section>
+    <article id="broodje_doner" class="menuItem" data-soort="kleine hap" data-popularity="populair" data-vegan="false">
+      <p>Broodje döner - De klassieker.</p>
+      <figure><img class="gerecht" src="img/broodje_doner.jpg" alt="Foto van een lekker broodje doner."></figure>
+    </article>
+    <article id="turkse_pizza" class="menuItem" data-soort="grote hap" data-popularity="populair" data-vegan="true">
+      <p>Turkse Pizza - Onze specialiteit!</p>
+      <figure><img class="gerecht" src="img/turkse_pizza.jpg" alt="Foto van een turkse pizza."></figure>
+    </article>
+    <article id="kapsalon" class="menuItem" data-soort="grote hap" data-popularity="populair" data-vegan="false">
+      <p>Kapsalon - Nostalgisch lekker.</p>
+      <figure><img class="gerecht" src="img/kapsalon.jpg" alt="Foto van onze zelfgemaakte Kapsalon."></figure>
+    </article>
+
+    <article id="hamburger" class="menuItem" data-soort="snack" data-popularity="normaal" data-vegan="false">
+      <p>Hamburger - Zoals je moeder hem altijd maakte.</p>
+      <figure><img class="gerecht" src="img/hamburger.jpg" alt="Foto van onze hamburger met frietjes."></figure>
+    </article>
+    <article id="kabouter_speciaal" class="menuItem" data-soort="grote hap" data-popularity="populair" data-vegan="false">
+      <p>Kabouter Special - Wie het kleine niet eert, is het grote niet weerd.</p>
+      <figure><img class="gerecht" src="img/kabouter_speciaal.png" alt="Foto van ons speciale gerecht, schotel kebab."></figure>
+    </article>
+    <article id="pita_kaas" class="menuItem" data-soort="kleine hap" data-popularity="normaal" data-vegan="true">
+      <p>Pita kaas - Bekend van het nummer!</p>
+      <figure><img class="gerecht" src="img/pita_kaas.jpg" alt="Foto van een pitabroodje met gesmolten kaas."></figure>
+    </article>
+
+    <article id="diverse_snacks" class="menuItem" data-soort="snack" data-popularity="normaal" data-vegan="false">
+      <p>Diverse snacks - Frituren als een malle.</p>
+      <figure><img class="gerecht" src="img/snacks.jpg" alt="Foto van verschillende snacks die verkrijgbaar zijn."></figure>
+    </article>
+    <article id="broodje_paddestoel" class="menuItem" data-soort="kleine hap" data-popularity="normaal" data-vegan="true">
+      <p>Broodje paddestoel - Hmmm, rood met witte stippen.</p>
+      <figure><img class="gerecht" src="img/broodje_paddestoel.jpg" alt="Foto van ons broodje paddestoel."></figure>
+    </article>
+    <article id="kaboutersalon" class="menuItem" data-soort="snack" data-popularity="normaal" data-vegan="false">
+      <p>Kaboutersalon - Voor de kleine smullers.</p>
+      <figure><img class="gerecht" src="img/kaboutersalon.jpg" alt="Foto van onze kapsalon voor kinderen."></figure>
+    </article>
+  </main>
+  <footer>
+    <figure><img src="img/kebabkabouter_logo.png" alt="Logo van restaurant: Kebab-Kabouter."></figure>
+    <h2> Deze website is gemaakt in opdracht van Hogeschool Leiden door Devin Stigter. </h2>
+  </footer>
+  <script src="main.js" charset="utf-8"></script>
 </body>
+
 </html>
