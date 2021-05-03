@@ -107,7 +107,7 @@ main, footer {
   padding-left: 35px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 2rem;
 }
 
 .buttonContainer input {
@@ -192,6 +192,37 @@ footer > h2{
   transform: scale(1.1) translateY(10px);
 }
 
+/*-----------Favorite Button---------*/
+.favorietButton{
+  position: absolute;
+  left: -100vw;
+}
+
+.favorietLabel{
+  color: #aab8c2;
+  font-size: 2em;
+  cursor: pointer;
+  align-self: center;
+}
+
+.favorietButton:checked + .favorietLabel{
+  color: #e2264d;
+  animation-name: favoriet;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(.20, .90, .30, 1.5);
+}
+
+/*-------------Animations------------*/
+@keyframes favoriet {
+  0%{
+    font-size: 0;
+  }
+  100%{
+    font-size: 2em;
+  }
+}
+
+/*---------------Media queries--------*/
 @media only screen and (max-width: 1000px){
   header > h1 {
     top: 10%;
@@ -240,6 +271,4 @@ footer > h2{
     left: 80%;
     font-size: 80%;
   }
-
-
 }

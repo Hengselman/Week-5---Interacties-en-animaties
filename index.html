@@ -23,44 +23,54 @@
       <label class="buttonContainer">Grote hap<input class="buttonFilter" id="buttonGroteHap" type="checkbox" name="groteHap" checked><span class="checkboxCustom"></span></label>
       <label class="buttonContainer">Snack<input class="buttonFilter" id="buttonSnack" type="checkbox" name="snack" checked><span class="checkboxCustom"></span></label>
       <label class="buttonContainer">Vegetarisch<input class="buttonFilter" id="buttonVegetarisch" type="checkbox" name="vegetarisch"><span class="checkboxCustom"></span></label>
+      <label class="buttonContainer">Favoriet<input class="buttonFilter" id="buttonFavoriet" type="checkbox" name="favoriet"><span class="checkboxCustom"></span></label>
     </section>
-    <article id="broodje_doner" class="menuItem" data-soort="kleine hap" data-popularity="populair" data-vegan="false">
+    <article id="broodje_doner" class="menuItem" data-soort="kleine hap" data-popularity="populair" data-vegan="false" data-favoriet="false">
       <p>Broodje döner - De klassieker.</p>
       <figure><img class="gerecht" src="img/broodje_doner.jpg" alt="Foto van een lekker broodje doner."></figure>
+      <input id="favoriet1" class="favorietButton" type="checkbox" /><label class="favorietLabel" for="favoriet1" onclick="addToFavorite(0)">❤</label>
     </article>
-    <article id="turkse_pizza" class="menuItem" data-soort="grote hap" data-popularity="populair" data-vegan="true">
+    <article id="turkse_pizza" class="menuItem" data-soort="grote hap" data-popularity="populair" data-vegan="true" data-favoriet="false">
       <p>Turkse Pizza - Onze specialiteit!</p>
       <figure><img class="gerecht" src="img/turkse_pizza.jpg" alt="Foto van een turkse pizza."></figure>
+      <input id="favoriet2" class="favorietButton" type="checkbox" /><label class="favorietLabel" for="favoriet2" onclick="addToFavorite(1)">❤</label>
     </article>
-    <article id="kapsalon" class="menuItem" data-soort="grote hap" data-popularity="populair" data-vegan="false">
+    <article id="kapsalon" class="menuItem" data-soort="grote hap" data-popularity="populair" data-vegan="false" data-favoriet="false">
       <p>Kapsalon - Nostalgisch lekker.</p>
       <figure><img class="gerecht" src="img/kapsalon.jpg" alt="Foto van onze zelfgemaakte Kapsalon."></figure>
+      <input id="favoriet3" class="favorietButton" type="checkbox" /><label class="favorietLabel" for="favoriet3" onclick="addToFavorite(2)">❤</label>
     </article>
 
-    <article id="hamburger" class="menuItem" data-soort="snack" data-popularity="normaal" data-vegan="false">
+    <article id="hamburger" class="menuItem" data-soort="snack" data-popularity="normaal" data-vegan="false" data-favoriet="false">
       <p>Hamburger - Zoals je moeder hem altijd maakte.</p>
       <figure><img class="gerecht" src="img/hamburger.jpg" alt="Foto van onze hamburger met frietjes."></figure>
+      <input id="favoriet4" class="favorietButton" type="checkbox" /><label class="favorietLabel" for="favoriet4" onclick="addToFavorite(3)">❤</label>
     </article>
-    <article id="kabouter_speciaal" class="menuItem" data-soort="grote hap" data-popularity="populair" data-vegan="false">
+    <article id="kabouter_speciaal" class="menuItem" data-soort="grote hap" data-popularity="populair" data-vegan="false" data-favoriet="false">
       <p>Kabouter Special - Wie het kleine niet eert, is het grote niet weerd.</p>
       <figure><img class="gerecht" src="img/kabouter_speciaal.png" alt="Foto van ons speciale gerecht, schotel kebab."></figure>
+      <input id="favoriet5" class="favorietButton" type="checkbox" /><label class="favorietLabel" for="favoriet5" onclick="addToFavorite(4)">❤</label>
     </article>
-    <article id="pita_kaas" class="menuItem" data-soort="kleine hap" data-popularity="normaal" data-vegan="true">
+    <article id="pita_kaas" class="menuItem" data-soort="kleine hap" data-popularity="normaal" data-vegan="true" data-favoriet="false">
       <p>Pita kaas - Bekend van het nummer!</p>
       <figure><img class="gerecht" src="img/pita_kaas.jpg" alt="Foto van een pitabroodje met gesmolten kaas."></figure>
+      <input id="favoriet6" class="favorietButton" type="checkbox" /><label class="favorietLabel" for="favoriet6" onclick="addToFavorite(5)">❤</label>
     </article>
 
-    <article id="diverse_snacks" class="menuItem" data-soort="snack" data-popularity="normaal" data-vegan="false">
+    <article id="diverse_snacks" class="menuItem" data-soort="snack" data-popularity="normaal" data-vegan="false" data-favoriet="false">
       <p>Diverse snacks - Frituren als een malle.</p>
       <figure><img class="gerecht" src="img/snacks.jpg" alt="Foto van verschillende snacks die verkrijgbaar zijn."></figure>
+      <input id="favoriet7" class="favorietButton" type="checkbox" /><label class="favorietLabel" for="favoriet7" onclick="addToFavorite(6)">❤</label>
     </article>
-    <article id="broodje_paddestoel" class="menuItem" data-soort="kleine hap" data-popularity="normaal" data-vegan="true">
+    <article id="broodje_paddestoel" class="menuItem" data-soort="kleine hap" data-popularity="normaal" data-vegan="true" data-favoriet="false">
       <p>Broodje paddestoel - Hmmm, rood met witte stippen.</p>
       <figure><img class="gerecht" src="img/broodje_paddestoel.jpg" alt="Foto van ons broodje paddestoel."></figure>
+      <input id="favoriet8" class="favorietButton" type="checkbox" /><label class="favorietLabel" for="favoriet8" onclick="addToFavorite(7)">❤</label>
     </article>
-    <article id="kaboutersalon" class="menuItem" data-soort="snack" data-popularity="normaal" data-vegan="false">
+    <article id="kaboutersalon" class="menuItem" data-soort="snack" data-popularity="normaal" data-vegan="false" data-favoriet="false">
       <p>Kaboutersalon - Voor de kleine smullers.</p>
       <figure><img class="gerecht" src="img/kaboutersalon.jpg" alt="Foto van onze kapsalon voor kinderen."></figure>
+      <input id="favoriet9" class="favorietButton" type="checkbox" /><label class="favorietLabel" for="favoriet9" onclick="addToFavorite(8)">❤</label>
     </article>
   </main>
   <footer>

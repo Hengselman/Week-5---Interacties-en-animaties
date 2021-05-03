@@ -9,6 +9,7 @@ const datasetKleineHap = document.querySelectorAll("[data-soort='kleine hap']");
 const datasetGroteHap = document.querySelectorAll("[data-soort='grote hap']");
 const datasetSnack = document.querySelectorAll("[data-soort='snack']");
 const datasetVegan = document.querySelectorAll("[data-vegan='false']");
+const datasetFavoriet = document.querySelectorAll("[data-favoriet='false']");
 
 buttonPopulair.addEventListener('change', (event) => {
   if (event.currentTarget.checked) {
@@ -69,3 +70,26 @@ buttonVegetarisch.addEventListener('change', (event) => {
     }
   }
 });
+
+//Favoriet filter
+buttonFavoriet.addEventListener('change', (event) => {
+  if (event.currentTarget.checked) {
+    for(i = 0; i < datasetFavoriet.length; i++){
+      if(datasetFavoriet[i].getAttribute("data-favoriet") === "false")
+      datasetFavoriet[i].style.display = "none";
+    }
+  } else {
+    for (i = 0; i < datasetFavoriet.length; i++) {
+      datasetFavoriet[i].style.display = "";
+    }
+  }
+});
+
+function addToFavorite(nummer) {
+  if(datasetFavoriet[nummer].getAttribute("data-favoriet") === "false"){
+      datasetFavoriet[nummer].setAttribute("data-favoriet", "true");
+      console.log(datasetFavoriet[nummer].getAttribute("data-favoriet"));
+  } else {
+    datasetFavoriet[nummer].setAttribute("data-favoriet", "false");
+  }
+}
