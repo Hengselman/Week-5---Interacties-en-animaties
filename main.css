@@ -19,7 +19,7 @@ body{
 header {
   height: 80vh;
   width: 100%;
-  background: url('img/gnome_banner.jpg') no-repeat center center fixed;
+  background: url('img/gnome_banner1.jpg') no-repeat center center fixed;
   position: relative;
 }
 
@@ -76,6 +76,10 @@ header > figure > img {
 main, footer {
   width: 80%;
   margin: 0 auto;
+}
+
+.menuitem > figure {
+  z-index: 0;
 }
 
 .gerechtenlijst {
@@ -186,10 +190,11 @@ footer > h2{
   height: 250px;
   transition: 0.2s all;
   object-fit: cover;
+  z-index: 0;
 }
 
 .gerecht:hover {
-  transform: scale(1.1) translateY(10px);
+  transform: scale(1.03) translateY(-5px);
 }
 
 /*-----------Favorite Button---------*/
@@ -203,6 +208,7 @@ footer > h2{
   font-size: 2em;
   cursor: pointer;
   align-self: center;
+  z-index: 10;
 }
 
 .favorietButton:checked + .favorietLabel{
@@ -210,6 +216,11 @@ footer > h2{
   animation-name: favoriet;
   animation-duration: 1s;
   animation-timing-function: cubic-bezier(.20, .90, .30, 1.5);
+}
+
+.favorietLabel:hover{
+  transition-duration: 0.6s;
+  color: #cf667c;
 }
 
 /*-------------Animations------------*/

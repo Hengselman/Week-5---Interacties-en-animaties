@@ -92,4 +92,18 @@ function addToFavorite(nummer) {
   } else {
     datasetFavoriet[nummer].setAttribute("data-favoriet", "false");
   }
-}
+};
+
+function randomSlogan() {
+  var slogans = [
+    'De lekkerste kebab, door de kleinste mensen!',
+    'Onze winkel is te vinden in het sprookjesbos!',
+    'Wij serveren ook hongerige smurfen!',
+    'Huh!? Broodje paddestoel is het huis van mijn buurvrouw!'
+  ];
+
+  var randomSlogan = Math.floor(Math.random() * slogans.length);
+  document.getElementById('sloganRandom').innerHTML = slogans[randomSlogan];
+};
+
+randomSlogan();
